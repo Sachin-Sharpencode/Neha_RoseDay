@@ -5,21 +5,26 @@
 <title>For Neha 🌹</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: radial-gradient(circle at top, #ffe6eb, #ee9ca7);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 16px;
 }
 
 /* Floating hearts */
 .heart {
     position: absolute;
-    font-size: 18px;
+    font-size: 16px;
     animation: floatUp 6s linear infinite;
     opacity: 0.6;
 }
@@ -31,10 +36,11 @@ body {
 
 .card {
     background: white;
-    padding: 32px;
+    padding: 24px;
     border-radius: 22px;
     text-align: center;
-    width: 330px;
+    width: 100%;
+    max-width: 360px;
     box-shadow: 0 25px 60px rgba(0,0,0,0.2);
     animation: cardEnter 1.2s ease;
     position: relative;
@@ -42,32 +48,33 @@ body {
 }
 
 @keyframes cardEnter {
-    0% { transform: scale(0.7) translateY(40px); opacity: 0; }
+    0% { transform: scale(0.85) translateY(30px); opacity: 0; }
     100% { transform: scale(1) translateY(0); opacity: 1; }
 }
 
 h1 {
     color: #e63946;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-size: clamp(20px, 5vw, 24px);
 }
 
 .rose {
-    font-size: 72px;
+    font-size: clamp(56px, 15vw, 72px);
     animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
     from { transform: scale(1); filter: drop-shadow(0 0 0px #ff5a6e); }
-    to { transform: scale(1.18); filter: drop-shadow(0 0 14px #ff5a6e); }
+    to { transform: scale(1.15); filter: drop-shadow(0 0 14px #ff5a6e); }
 }
 
 p {
     color: #444;
-    font-size: 15px;
+    font-size: clamp(14px, 4vw, 15px);
     line-height: 1.7;
     opacity: 0;
     animation: fadeIn 1.5s forwards;
-    animation-delay: 0.8s;
+    animation-delay: 0.6s;
 }
 
 @keyframes fadeIn {
@@ -79,10 +86,12 @@ button {
     background: linear-gradient(135deg, #e63946, #ff6f7d);
     color: white;
     border: none;
-    padding: 11px 22px;
+    padding: 12px 26px;
     border-radius: 30px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
+    width: 100%;
+    max-width: 240px;
     box-shadow: 0 10px 20px rgba(230,57,70,0.35);
 }
 
@@ -93,10 +102,11 @@ button:hover {
 .hidden {
     display: none;
     margin-top: 18px;
-    font-size: 14px;
+    font-size: clamp(13px, 3.8vw, 14px);
     color: #333;
     animation: fadeIn 1s forwards;
 }
+
 </style>
 </head>
 
